@@ -1,0 +1,82 @@
+.registerBox {
+    width           : 320px;
+    height          : 470px;
+    background-color: #000;
+    color           : #fff;
+    top             : 50%;
+    left            : 50%;
+    position        : absolute;
+    transform       : translate(-50%, -50%);
+    box-sizing      : border-box;
+    padding         : 70px 30px;
+    border-radius   : 8px;
+
+    h1 {
+        margin    : 0;
+        padding   : 0 0 20px;
+        text-align: center;
+        font-size : 22px;
+    }
+
+    & p {
+        margin     : 0;
+        padding    : 0;
+        font-weight: bold;
+
+    }
+
+    form {
+        // position: relative;
+
+        input {
+            width        : 100%;
+            margin-bottom: 20px;
+            color        : #fff;
+        }
+
+        input:where([type="text"], [type="email"], [type="password"]) {
+            border       : none;
+            border-bottom: 1px solid #fff;
+            background   : transparent;
+            outline      : none;
+            height       : 40px;
+
+
+        }
+
+        input:where([type="submit"]) {
+            background-color: #fff;
+            padding         : .3rem 1rem;
+            border          : none;
+            border-radius   : 8px;
+            color           : #000;
+        }
+
+        p:last-child {
+            font-weight: normal;
+            font-size  : 13px;
+            position   : absolute;
+            bottom     : 14px;
+            left       : 28%;
+        }
+
+        input:disabled {
+            background-color: gray;
+        }
+
+        input.ng-touched.ng-invalid input {
+            background: rgb(255, 213, 213);
+        }
+
+        button {
+            width           : 100%;
+            background-color: #fff;
+            padding         : .3rem 1rem;
+            color           : #000;
+            border          : none;
+            border-radius   : 8px;
+            margin-bottom   : 1rem;
+        }
+    }
+
+}

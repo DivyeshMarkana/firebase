@@ -1,0 +1,25 @@
+nav {
+    background     : #000;
+    color          : #fff;
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+    font-size      : 1.5rem;
+
+    ul {
+        list-style     : none;
+        display        : flex;
+        justify-content: space-between;
+
+        li+li {
+            margin-left: 1rem;
+        }
+
+        a {
+            color          : #fff;
+            text-decoration: none;
+            cursor         : pointer;
+        }
+
+    }
+}

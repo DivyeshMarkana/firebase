@@ -1,0 +1,15 @@
+<!-- ! Login and Register with email and password -->
+<div class="loginBox">
+    <h1>Login Here</h1>
+    <form [formGroup]="login_form" (ngSubmit)="logIn()">
+        <p>Email</p>
+        <input type="email" name="" placeholder="Ex. Mac@divyesh.com" formControlName="email">
+        <p>password</p>
+        <input type="password" name="" placeholder="Enter Password" formControlName="password">
+
+        <input type="submit" value="Login" [disabled]="!login_form.valid">
+        <!-- <button type="button" [disabled]="!login_form.valid" (click)="logIn()">Login</button> -->
+        <button type="button" (click)="googleSignIn()">Signin with Google</button>
+    </form>
+    <h5>{{error}}</h5>
+</div>

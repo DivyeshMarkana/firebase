@@ -1,0 +1,110 @@
+.container {
+    display        : flex;
+    justify-content: space-around;
+    margin-top     : 3rem;
+}
+
+// Hero list 
+
+.heroes {
+
+    ul {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        // align-items: center;
+
+
+        li {
+            margin-top     : 2rem;
+            display        : flex;
+            justify-content: space-between;
+
+            span {
+                margin-right: 1rem;
+
+            }
+        }
+    }
+}
+
+.registerBox {
+    width              : 320px;
+    height             : 470px;
+    background-color   : #000;
+    color              : #fff;
+    // top             : 50%;
+    // left            : 50%;
+    // position        : absolute;
+    // transform       : translate(-50%, -50%);
+    box-sizing         : border-box;
+    padding            : 70px 30px;
+    border-radius      : 8px;
+
+    h1 {
+        margin    : 0;
+        padding   : 0 0 20px;
+        text-align: center;
+        font-size : 22px;
+    }
+
+    & p {
+        margin     : 0;
+        padding    : 0;
+        font-weight: bold;
+
+    }
+
+    form {
+        // position: relative;
+
+        input {
+            width        : 100%;
+            margin-bottom: 20px;
+            color        : #fff;
+        }
+
+        input:where([type="text"], [type="email"], [type="password"]) {
+            border       : none;
+            border-bottom: 1px solid #fff;
+            background   : transparent;
+            outline      : none;
+            height       : 40px;
+
+
+        }
+
+        input:where([type="submit"]) {
+            background-color: #fff;
+            padding         : .3rem 1rem;
+            border          : none;
+            border-radius   : 8px;
+            color           : #000;
+        }
+
+        p:last-child {
+            font-weight: normal;
+            font-size  : 13px;
+            position   : absolute;
+            bottom     : 14px;
+            left       : 28%;
+        }
+
+        input:disabled {
+            background-color: gray;
+        }
+
+        input.ng-touched.ng-invalid input {
+            background: rgb(255, 213, 213);
+        }
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+    }
+}

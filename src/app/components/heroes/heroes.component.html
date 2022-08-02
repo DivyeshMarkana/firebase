@@ -1,0 +1,30 @@
+<!-- ! Hero form to Add new hero to Firestore -->
+<div class="container">
+    <div class="registerBox">
+        <h1> Add new hero</h1>
+        <form [formGroup]="hero_form" (ngSubmit)="addHero()">
+            <p>Hero name</p>
+            <input type="text" name="" placeholder=" Enter Hero name" formControlName="name">
+            <p>Hero power</p>
+            <input type="text" name="" placeholder="Enter Hero power" formControlName="power">
+            <p>Hero id</p>
+
+            <input type="text" name="" placeholder="Enter id" formControlName="id">
+
+            <input type="submit" value="Add" [disabled]="!hero_form.valid">
+        </form>
+    </div>
+
+
+    <div class="heroes">
+
+        <ul>
+            <li *ngFor="let hero of heroes">
+                <span>{{hero.heroName}}</span><span>{{hero.heroId}}</span><span>{{hero.heroPower}}</span><span><button
+                        (click)="updateHero(hero.id)">Update</button></span><span><button
+                        (click)="deleteHero(hero.id)">Delete</button></span>
+            </li>
+        </ul>
+
+    </div>
+</div>

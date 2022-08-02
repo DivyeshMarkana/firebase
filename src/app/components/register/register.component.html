@@ -1,0 +1,18 @@
+<!-- ! Login and Register with email and password -->
+<div class="registerBox">
+    <h1>Register Now</h1>
+    <form [formGroup]="login_form" (ngSubmit)="register()">
+        <p>Email</p>
+        <input type="email" name="" placeholder="Ex. Mac@divyesh.com" formControlName="email">
+        <p>password</p>
+        <input type="password" name="" placeholder="Enter Password" formControlName="password">
+
+        <input type="submit" value="Register" [disabled]="!login_form.valid">
+        <button type="button" (click)="googleSignIn()">Signin with Google</button>
+    </form>
+    <h5>{{error}}</h5>
+
+    <!-- <ng-container *ngIf="errorMsg">
+        <small>User already exists</small>
+    </ng-container> -->
+</div>
